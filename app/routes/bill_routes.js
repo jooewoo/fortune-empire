@@ -30,13 +30,18 @@ const router = express.Router()
 
 // INDEX
 // GET /bills
-router.get('/bills', (req, res) => {
+router.get('/bills', requireToken, (req, res) => {
   Bill.find()
     .then(bills => {
+      const billsOwner = bills.filter(bill => {
+        if (JSON.stringify(bill.owner) === JSON.stringify(req.user._id)) {
+          return true
+        }
+      })
       // `bills` will be an array of Mongoose documents
       // we want to convert each one to a POJO, so we use `.map` to
       // apply `.toObject` to each one
-      return bills.map(bill => bill.toObject())
+      return billsOwner.map(bill => bill.toObject())
     })
     // respond with status 200 and JSON of the bills
     .then(bills => res.status(200).json({ bills: bills }))
