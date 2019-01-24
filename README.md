@@ -62,11 +62,11 @@ Once I had a finalized plan, I began working on the back end API, by setting up 
 Finally, I progressed to working on the front end client to try and achieve minimum viable product. Once I confirmed the application was functional, I began working on the design.
 
 ### ERD
-![capstone](https://media.git.generalassemb.ly/user/17221/files/83ba6100-1b0f-11e9-8d69-60bfb01b251d)
+![capstone](./images/capstone.png)
 
 ## Future Intentions
 1. Add a model for Profile, and relate it to the user and bills model.
-2. Store information of a user's income and disposable income in the Profile Model. 
+2. Store information of a user's income and disposable income in the Profile Model.
 
 ## Links
 * [Front-End Repository](https://github.com/jooewoo/fortune-empire-front-end-client)
