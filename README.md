@@ -47,7 +47,7 @@ use `npm` anyway. These are the commands available:
 | Verb   | URI Pattern            | Controller#Action |
 |--------|------------------------|-------------------|
 | POST   | `/bills`               | `Bills#create`    |
-| GET    | `/bills`               | `Bills#index`     |
+| GET    | `/bills`               | `Bills#show`     |
 | GET    | `/bills/:id`           | `Bills#index`     |
 | PATCH  | `/bills/:id`           | `Bills#update`    |
 | DELETE | `/bills/:id`           | `Bills#destroy`   |
